@@ -1,9 +1,8 @@
-﻿namespace Fsm.State
+namespace Fsm.State;
+
+public abstract class StateModifier<T>
 {
-    public abstract class StateModifier<T>
-    {
-        abstract public void UpdateModify(T entity);
-        abstract public void EnterModify(T entity);
-        abstract public void ExitModify(T entity);
-    }
+    public abstract void UpdateModify(T entity);
+    public abstract void EnterModify(T entity);
+    public abstract void ExitModify(T entity);
 }
